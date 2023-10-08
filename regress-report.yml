@@ -1,0 +1,25 @@
+#https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+---
+test-cases:
+  - summary: |
+      Поиск товара по категории smartphones
+    status: pass
+
+  - summary: |
+      Поиск товара по категории furniture
+    status: fail
+---
+- summary: |
+    В выпадающем меню категорий доступны не все категории
+  environment: |
+    Brave Версия 1.58.137 Chromium: 117.0.5938.153 (Официальная сборка), (64 бит)
+    OC Windows 10 home 22H2
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажать на "Category" в меню слева
+  expected-result: |
+    Можно выбрать любую из 20-ти категорий
+  actual-result: |
+    Доступны только 6 категорий из 20-ти.
+    Снимок экрана 2023-10-08 151858
+    Снимок экрана 2023-10-08 151719
