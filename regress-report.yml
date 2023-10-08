@@ -1,4 +1,5 @@
 #https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+---
 test-cases:
   - summary: |
       Поиск товара по категории smartphones
