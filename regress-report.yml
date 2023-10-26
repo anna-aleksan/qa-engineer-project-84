@@ -7,7 +7,8 @@ test-cases:
   - summary: |
       Поиск товара по категории furniture
     status: fail
----
+
+bugreports:
 - summary: |
     В выпадающем меню категорий доступны не все категории
   environment: |
