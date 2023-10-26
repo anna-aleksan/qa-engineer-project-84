@@ -13,7 +13,6 @@
   expected-result: |
     Показаны товары содержащие это слово в названии
 
----
 - summary: |
     Поиск товара по категории smartphones
   requirement: |
@@ -29,7 +28,6 @@
   expected-result: |
     Показаны товары, которые относятся к выбранной категории
 
----
 - summary: |
     Поиск товара по категории furniture
   requirement: |
