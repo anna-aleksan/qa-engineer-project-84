@@ -1,0 +1,12 @@
+---
+- summary: |
+    Поиск товара по ключевому слову iPhone
+  status: pass
+
+- summary: |
+    Поиск товара по категории smartphones
+  status: pass
+
+- summary: |
+    Поиск товара по категории furniture
+  status: fail

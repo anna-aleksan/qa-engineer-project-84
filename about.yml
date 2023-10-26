@@ -1,12 +1,10 @@
 ---
-# с помощью символа # создаются комментарии, чтобы что-то пояснить
 name: Anna Aleksan
 job: QA Engineer
 level: junior
 email: annaaleksan@inbox.ru
 description: |
   Учусь на тестировщика.
-
   С сентября 2023 года.
 skills: 
   - функциональное тестирование
