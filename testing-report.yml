@@ -54,3 +54,11 @@
 - summary: |
     Кнопки пагинации
   status: fail
+
+- summary: |
+    Адаптивность изображений на превью
+  status: fail
+
+- summary: |
+    Соотношение сторон изображения
+  status: fail
