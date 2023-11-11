@@ -1,15 +1,77 @@
 ---
 - summary: |
-    В выпадающем меню категорий доступны не все категории
+    Проверка скорости загрузки сайта
   environment: |
     Brave Версия 1.58.137 Chromium: 117.0.5938.153 (Официальная сборка), (64 бит)
     OC Windows 10 home 22H2
   steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    2. Нажать на "Category" в меню слева
+    - Открыть инструмент разработчика DevTools
+    - Перейти в раздел Lighthouse
+    - Нажать 'Analyze'
+    - Дождаться сформирования отчета по метрикам
   expected-result: |
-   Доступна для выбора любая из 20-ти категорий
+    Отчет Lighthouse показал положительную оценку производительности
   actual-result: |
-    Доступны только 6 категорий из 20-ти.
-    Снимок экрана 2023-10-08 151858
-    Снимок экрана 2023-10-08 151719
+    Ресурсы, блокирующие рендеринг:
+    https://site/static/js/author.js
+    https://site/static/js/author.js
+    https://hexlet-products-store.vercel.app/static/css/main.d0332666.css
+
+- summary: |
+    Проверка кэширования файлов при загрузке
+  environment: |
+    Brave Версия 1.58.137 Chromium: 117.0.5938.153 (Официальная сборка), (64 бит)
+    OC Windows 10 home 22H2
+  steps-to-reproduce: |
+    - Открыть сайт https://hexlet-products-store.vercel.app/
+    - Открыть инструмент разработчика DevTools
+    - Опция Disable cache не активна
+    - Обновить страницу Ctrl+R
+    - Перейти в раздел Aplication/Cache stirage
+    - Просмотреть список кэшируемых файлов или во вкладке Network в колонке Size - пометку 'memory_cache' 
+    - Перейти в раздел Lighthouse
+    - Нажать 'Analyze'
+    - Дождаться сформирования отчета по метрикам
+  expected-result: |
+    Отчет Lighthouse показал положительную оценку производительности
+    При повторной загрузке, сайт загружается быстрее (менее 3 секунды)
+  actual-result: |
+    Отсутствие кэширование файлов:
+    https://hexlet-products-store.vercel.app/static/js/main.63ad73d1.js
+    https://hexlet-products-store.vercel.app/static/css/main.d0332666.css
+    https://hexlet-products-store.vercel.app/static/media/flag-ru.681be059a77988814a02724668aa2e3d.svg
+    https://hexlet-products-store.vercel.app/english
+
+- summary: |
+    Проверка адаптивности сайта на планшете
+  environment: |
+    Brave Версия 1.58.137 Chromium: 117.0.5938.153 (Официальная сборка), (64 бит)
+    OC Windows 10 home 22H2
+  steps-to-reproduce: |
+    - Открыть сайт на планшете iPad
+    - Произвести порядок действий при вертикальном и горизонтальном расположении экрана
+    - Просмотреть главную страницу
+    - Открыть страницу товара
+    - Перейти в корзину
+  expected-result: |
+    Макет сайта адаптируется под экран планшета. Корректно отображаются основные элементы сайта (шапка, меню, список товаров)
+  actual-result: |
+    
+
+- summary: |
+    Кнопки пагинации
+  environment: |
+    Brave Версия 1.58.137 Chromium: 117.0.5938.153 (Официальная сборка), (64 бит)
+    OC Windows 10 home 22H2
+  steps-to-reproduce: |
+    - Открыть сайт https://hexlet-products-store.vercel.app/
+    - Перейти на следующую страницу сайта с помощью кнопки 'Next'
+    - Перейти на предыдущую страницу сайта с помощью кнопоки 'Previous'
+    - Применить любой фильтр по категориям, где результатом будут менее 30 товаров
+    - Проверить работу кнопок 'Previous' и 'Next'
+  expected-result: |
+    Кнопки пагинации работают корректно, отображают свое состояние
+    Переходы без перезагрузки страницы сайта.
+  actual-result: |
+    Указать количество страниц результатов при применении фильтров и сортировки
+    Заблокировать и задать соответствующие визуальное состоянии кнопки при отсутствии результатов после перехода (Nothing found!)
