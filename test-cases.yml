@@ -106,7 +106,7 @@
   test-data: |
     Браузер = Firefox 119.0.1 (64-разрядный)
     Браузер = Google Chrome Версия 119.0.6045.124 (Официальная сборка), (64 бит)
-  steps:
+  steps: |
     - Открыть в Firefox https://hexlet-products-store.vercel.app/
     - Открыть в Chrome https://hexlet-products-store.vercel.app/
     - Сравнить отображение шрифтов:
@@ -140,7 +140,7 @@
     Открыта главная страница https://hexlet-products-store.vercel.app/
   test-data: |
     Язык = Русский
-  steps:
+  steps: |
     - На главной странице в меню Language выбрать 'Russian'
     - Проверить перевод главной страницы:
       Меню шапки сайта
@@ -251,7 +251,7 @@
     Товар = Stylish Casual Jeans Shoes
     Товар = Cycle Bike Glow
     Товар = new arrivals Fashion motocross goggles
-  steps:
+  steps: |
     - Ввести в поле поиска 'Key'
     - Проверить результат выполненного запроса
     - Повторить со словами:
@@ -277,7 +277,7 @@
     Товар = Stylish Casual Jeans Shoes
     Товар = Cycle Bike Glow
     Товар = new arrivals Fashion motocross goggles
-  steps:
+  steps: |
     - Выбрать из списка категорий 'home-decoration'
     - Проверить результат выполненного запроса
     - Повторить с категориями:
@@ -296,7 +296,7 @@
   test-data: |
     Товар = Key Holder
     Категория = home-decoration
-  steps:
+  steps: |
     - Выбрать из списка категорий 'home-decoration'
     - Вернуться к списку всех товаров перечисленными способами:
       Выбрав пустую категорию
@@ -339,7 +339,7 @@
     Категория = furniture
     Категория = mens-watches
     Категория = motorcycle
-  steps:
+  steps: |
     - Выбрать категорию smartphones
     - Повторить с категориями:
       furniture
@@ -431,7 +431,7 @@
   test-data: |
     Товар = iPhone 9
     Товар = Key Holder
-  steps:
+  steps: |
     - Проверить отображение остатков:
       На перевью
       На странице товара
@@ -605,7 +605,7 @@
     Товар = Tree Oil 30ml
     Товар = cereals muesli fruit nuts
     Товар = TC Reusable Silicone Magic Washing Gloves
-  steps:
+  steps: |
     - Добавить товары в корзину
     - Перейти в корзину
     - Изменить количество единиц товаров:
