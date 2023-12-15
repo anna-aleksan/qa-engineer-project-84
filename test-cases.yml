@@ -13,7 +13,6 @@
     - В DevTools перейти на вкладку Console
   expected-result: |
     В Console отсутствуют ошибки
-
 - summary: |
     Отсутствие ошибок issues в DevTools
   requirement: |
