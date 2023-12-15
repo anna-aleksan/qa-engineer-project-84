@@ -37,11 +37,11 @@
 
 - summary: |
     Поиск товара при вводе только пробела
-  status: fail
+  status: pass
 
 - summary: |
     Поиск товара по ключевому слову в описании товара
-  status: fail
+  status: pass
 
 - summary: |
     Отсутствие результатов поиска

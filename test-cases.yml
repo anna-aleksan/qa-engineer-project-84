@@ -717,7 +717,7 @@
     - Открыть DevTools
     - В DevTools вкладка Sicurity проверить сертификат SSL
   expected-result: |
-    Проверка сертификата SSL ответ: 'This page is secure (valid HTTPS)'
+    Проверка сертификата SSL ответ: This page is secure (valid HTTPS)
 
 - summary: | # информация о товаре
     Отображение цены товара на превью и в карточке товара
